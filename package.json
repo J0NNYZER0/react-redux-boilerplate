@@ -29,8 +29,6 @@
     "domain": "0.0.1",
     "history": "^4.7.2",
     "prop-types": "^15.7.2",
-    "raygun": "^0.10.0",
-    "raygun4js": "^2.13.4",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-hot-loader": "^4.7.2",
