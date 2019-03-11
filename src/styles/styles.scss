@@ -1,0 +1,168 @@
+html {
+  font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: .875rem;
+}
+input, button { outline: none; }
+.checkout-page {}
+.purchase-summary {
+  width: 250px;
+  margin: auto;
+  border: 2px solid #eaeaea;
+  border-radius: 6px;
+  padding: 10px 10px 20px;
+}
+.subtotal,
+.taxes,
+.tooltip-wrapper,
+.estimated-total,
+.item-details,
+.price-qty {
+  display: flex;
+}
+.subtotal > div,
+.taxes > div,
+.tooltip-wrapper > div,
+.estimated-total > div {
+  flex: 1;
+  margin: 5px;
+}
+.price-qty > div:first-child {
+  font-weight: 600;
+}
+.price-qty > div {
+  flex: 1;
+  margin: 5px auto;
+}
+.subtotal > div:nth-child(2),
+.taxes > div:nth-child(2),
+.tooltip-wrapper > div:nth-child(2),
+.estimated-total > div:nth-child(2) {
+  text-align: right;
+  font-weight: bold;
+}
+.price-qty > div:nth-child(2) {
+  text-align: right;
+}
+.pickup-saving {
+  color: red;
+}
+.zipcode {
+  margin-left: 5px;
+}
+.estimated-total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.estimated-total > div {}
+.item-details {}
+.item-name {
+  line-height: 1.5rem;
+}
+.price-qty {}
+.item-price {}
+.item-list-price {
+  color: #666;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+.promo-code > div:first-child {
+  color: #666;
+  margin: 3px 5px 0px;
+}
+.promo-code-form {}
+.text-input {
+  width: 150px;
+  padding: 12px 5px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+}
+button:disabled {
+  border: 2px solid #999;
+  color: #999;
+}
+.button-input {
+  width: 75px;
+  margin: 4px auto auto 15px;
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid black;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.apply-promo-code {
+  border-radius: 18px;
+}
+.tooltip {}
+.tooltip > div {}
+.tooltip {
+  visibility: hidden;
+  width: 125px;
+  border: 1px solid #F0F0F0;
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: 35px;
+  margin-left: -25px;
+  text-align: center;
+  position: absolute;
+  background: #FFF;
+  font-size: .875rem;
+}
+.tooltip-text {
+  text-decoration: underline;
+}
+.bubble:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #F0F0F0;
+  right: 50%;
+  top: -20px;
+}
+.bubble:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  right: 50%;
+  top: -18px;
+}
+.tooltip-wrapper:hover .tooltip {
+  visibility: visible;
+}
+.toggle-text {
+  margin-bottom: 15px;
+  margin-left: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.icon {
+  width: 12px;
+  margin-left: 10px;
+}
+.minus-icon {
+  content: url('https://s3.us-east-2.amazonaws.com/ui-icons/black/minus-icon.svg');
+}
+.plus-icon {
+  content: url('https://s3.us-east-2.amazonaws.com/ui-icons/black/plus-icon.svg');
+}
+.border {
+  height: 1px;
+  width: 100%;
+  margin: 15px 0;
+  border-bottom: 1px solid #F0F0F0;
+}

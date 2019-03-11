@@ -1,0 +1,10 @@
+{
+  "status": 200,
+  "data": {
+    "subtotal": 102.96,
+    "savings": 3.85,
+    "tax": 8.92,
+    "total": 108.03,
+    "zip": 85050
+  }
+}
