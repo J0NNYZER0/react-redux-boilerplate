@@ -27,7 +27,6 @@ class ErrorBoundary extends Component {
     const { children } = this.props;
 
     if (currentError) {
-      console.log('currentError', currentError);
       // You can render any custom fallback UI
       return (
         <div className="error">

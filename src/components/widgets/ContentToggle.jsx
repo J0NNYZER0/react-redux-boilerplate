@@ -24,7 +24,6 @@ class ContentToggle extends Component {
     const { children, showText, hideText } = this.props;
     const { showContent } = this.state;
     const defaultText = showContent === true ? hideText : showText;
-    null.bar;
     return (
       <div className="content-toggle" onClick={this.handleOnClick} onKeyDown={this.handleClick} role="none">
         <div className="toggle-text">
