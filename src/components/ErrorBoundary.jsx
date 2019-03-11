@@ -5,31 +5,33 @@ class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentError: null,
-      errorInfo: null,
+      error: null,
+      stack: null,
     };
   }
 
   componentDidCatch(error, info) {
     // You can also log the error to an error reporting service
     this.setState({
-      currentError: error,
-      errorInfo: info,
+      error: error,
+      stack: info.componentStack,
     });
   }
 
   render() {
-    const { currentError, errorInfo } = this.state;
+    const { error, stack } = this.state;
     const { children } = this.props;
 
-    if (currentError) {
-      console.log('currentError', currentError);
+    if (error) {
       // You can render any custom fallback UI
       return (
         <div className="error">
-          <h1>Something went wrong.</h1>
-          <div>{currentError}</div>
-          <div>{errorInfo}</div>
+          <h4>Something went wrong</h4>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
+            {error.toString()}
+            <br />
+            {stack}
+          </details>
         </div>
       );
     }
