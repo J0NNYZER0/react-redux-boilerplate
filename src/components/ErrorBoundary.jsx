@@ -16,10 +16,6 @@ class ErrorBoundary extends Component {
       currentError: error,
       errorInfo: info,
     });
-
-    if (window.rg4js) {
-      window.rg4js('send', error);
-    }
   }
 
   render() {
