@@ -5,6 +5,10 @@ import { bindActionCreators } from 'redux';
 import * as pricingActions from '../../actions/pricing';
 import * as itemDetailsActions from '../../actions/itemDetails';
 import PurchaseSummary from '../widgets/PurchaseSummary';
+import ContentToggle from '../widgets/ContentToggle';
+import Border from '../widgets/Border';
+import ItemDetails from '../widgets/ItemDetails';
+import Form from '../forms/Index';
 
 class HomePage extends Component {
   componentDidMount() {
@@ -14,15 +18,24 @@ class HomePage extends Component {
   }
 
   render() {
-    const { itemDetails, pricing } = this.props;
+    const { actions, itemDetails, pricing } = this.props;
     return (
-      <div className="checkout-page">
-        <PurchaseSummary
-          {...this.props}
-          itemDetails={itemDetails}
-          pricing={pricing}
-        />
-      </div>
+      <PurchaseSummary
+        itemDetails={itemDetails}
+        pricing={pricing}
+      >
+        <ContentToggle showText="See Item Details" hideText="Hide Item Details">
+          <ItemDetails itemDetails={itemDetails} />
+        </ContentToggle>
+        <Border />
+        <ContentToggle showText="Apply Promo Code" hideText="Hide Promo Code">
+          <Form
+            submitHandler={actions.pricing.applyPromoDiscount}
+            disableButton={pricing.appliedDiscount || false}
+            subTotal={parseInt(pricing.subtotal, 10) || 0}
+          />
+        </ContentToggle>
+      </PurchaseSummary>
     );
   }
 }

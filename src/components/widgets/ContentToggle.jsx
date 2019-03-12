@@ -27,7 +27,7 @@ class ContentToggle extends Component {
 
     return (
       <div className="content-toggle">
-        <div className="toggle-text" onClick={this.handleOnClick}>
+        <div className="toggle-text" onClick={this.handleOnClick} role="none">
           {defaultText}
           <ToggleIcon toggle={showContent} />
         </div>
