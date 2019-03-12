@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PromoCodeForm from '../forms/PromoCodeForm';
+import Form from '../forms/Index';
 import ContentToggle from './ContentToggle';
 import Pricing from './Pricing';
 import ItemDetails from './ItemDetails';
@@ -15,8 +15,8 @@ const PurchaseSummary = ({ actions, itemDetails, pricing }) => (
     <ContentToggle showText="Apply Promo Code" hideText="Hide Promo Code">
       <div className="promo-code">
         <div>Promo code</div>
-        <PromoCodeForm
-          applyPromoDiscount={actions.pricing.applyPromoDiscount}
+        <Form
+          submitHandler={actions.pricing.applyPromoDiscount}
           disableButton={pricing.appliedDiscount || false}
           subTotal={parseInt(pricing.subtotal, 10) || 0}
         />

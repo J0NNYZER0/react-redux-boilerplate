@@ -4,11 +4,9 @@ import { hot } from 'react-hot-loader';
 import HomePage from './pages/Home';
 
 const App = () => (
-  <div>
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-    </Switch>
-  </div>
+  <Switch>
+    <Route exact path="/" component={HomePage} />
+  </Switch>
 );
 
 export default hot(module)(App);

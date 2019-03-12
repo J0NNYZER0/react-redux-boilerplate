@@ -4,7 +4,6 @@ import Tooltip from './Tooltip';
 
 const Pricing = ({ pricing }) => {
   const tootTipText = 'Picking up your order in the store helps cut costs, and we pass the saving onto you.';
-  null.bar;
   return (
     <div className="pricing">
       <div className="subtotal">

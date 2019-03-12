@@ -8,6 +8,7 @@ const TextInput = ({
     autoComplete={autocomplete}
     className={classNames !== '' ? `text-input ${classNames}` : 'text-input'}
     name={inputName}
+    onBlur={(e) => { e.stopPropagation(); }}
     onChange={onChangeHandler}
     placeholder={placeholder !== '' ? placeholder : null}
     type="text"

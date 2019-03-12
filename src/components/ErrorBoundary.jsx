@@ -13,7 +13,7 @@ class ErrorBoundary extends Component {
   componentDidCatch(error, info) {
     // You can also log the error to an error reporting service
     this.setState({
-      error: error,
+      error,
       stack: info.componentStack,
     });
   }

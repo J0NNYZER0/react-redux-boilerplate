@@ -26,8 +26,8 @@ class ContentToggle extends Component {
     const defaultText = showContent === true ? hideText : showText;
 
     return (
-      <div className="content-toggle" onClick={this.handleOnClick} onKeyDown={this.handleClick} role="none">
-        <div className="toggle-text">
+      <div className="content-toggle">
+        <div className="toggle-text" onClick={this.handleOnClick}>
           {defaultText}
           <ToggleIcon toggle={showContent} />
         </div>
