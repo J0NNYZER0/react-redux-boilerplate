@@ -2,17 +2,17 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import TestButtonInput from './Button';
 
-const mockOnClickHandler = jest.fn();
+const mockOnClickHandler = jest.fn(),
 
 
-const ButtonInput = (
-  <TestButtonInput
-    buttonText="Apply"
-    classNames="apply-promo-code"
-    disableButton={false}
-    onClick={mockOnClickHandler}
-  />
-);
+  ButtonInput = (
+    <TestButtonInput
+      buttonText="Apply"
+      classNames="apply-promo-code"
+      disableButton={false}
+      onClick={mockOnClickHandler}
+    />
+  );
 
 describe('<ButtonInput />', () => {
   let wrapper = shallow(ButtonInput);

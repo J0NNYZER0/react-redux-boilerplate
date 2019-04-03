@@ -2,18 +2,18 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import TestTextInput from './Text';
 
-const mockDefaultVal = '';
-const mockIdVal = 'promoCode';
-const mockInputNameVal = 'promoCode';
-const mockOnChangeHandler = jest.fn();
-const TextInput = (
-  <TestTextInput
-    defaultValue={mockDefaultVal}
-    idVal={mockIdVal}
-    inputName={mockInputNameVal}
-    onChangeHandler={mockOnChangeHandler}
-  />
-);
+const mockDefaultVal = '',
+  mockIdVal = 'promoCode',
+  mockInputNameVal = 'promoCode',
+  mockOnChangeHandler = jest.fn(),
+  TextInput = (
+    <TestTextInput
+      defaultValue={mockDefaultVal}
+      id={mockIdVal}
+      inputName={mockInputNameVal}
+      onChangeHandler={mockOnChangeHandler}
+    />
+  );
 
 describe('<TextInput />', () => {
   let wrapper = shallow(TextInput);
@@ -30,7 +30,7 @@ describe('<TextInput />', () => {
     wrapper = shallow(
       <TestTextInput
         defaultValue={mockDefaultVal}
-        idVal={mockIdVal}
+        id={mockIdVal}
         inputName={mockInputNameVal}
         onChangeHandler={mockOnChangeHandler}
       />,
@@ -50,7 +50,7 @@ describe('<TextInput />', () => {
     wrapper = shallow(
       <TestTextInput
         defaultValue={mockDefaultVal}
-        idVal={mockIdVal}
+        id={mockIdVal}
         inputName={mockInputNameVal}
         onChangeHandler={mockOnChangeHandler}
       />,

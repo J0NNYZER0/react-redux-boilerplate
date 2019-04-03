@@ -1,0 +1,36 @@
+input, button { outline: none; }
+label {
+  color: #666;
+  margin: 3px 5px 0px;
+}
+.text-input {
+  width: 100%;
+  margin: 10px auto;
+  padding: 12px 5px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+}
+button:disabled {
+  border: 2px solid #999;
+  color: #999;
+}
+.button-input {
+  width: 100%;
+  margin: 10px auto;
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid black;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.mv-btn {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}

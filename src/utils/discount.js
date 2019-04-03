@@ -4,9 +4,8 @@ const getDiscount = (code) => {
   };
 
   return discountCodes[code];
-};
-
-const applyPromoDiscount = (code, total) => {
+},
+applyPromoDiscount = (code, total) => {
   const validDiscount = getDiscount(code);
 
 

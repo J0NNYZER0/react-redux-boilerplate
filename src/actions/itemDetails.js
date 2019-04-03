@@ -1,4 +1,4 @@
-import getItemDetails from '../apis/itemDetails';
+import getItemsDetails from '../apis/itemDetails';
 import { GET_ITEM_DETAILS } from '../constants/actionTypes';
 
 const success = data => ({
@@ -6,7 +6,7 @@ const success = data => ({
 });
 
 export function get(data) {
-  return dispatch => getItemDetails(data).then((response) => {
+  return dispatch => getItemsDetails(data).then((response) => {
     dispatch(success(response.data));
   }).catch((error) => {
     throw (error);

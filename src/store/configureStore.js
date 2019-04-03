@@ -8,9 +8,8 @@ import rootReducer from '../reducers';
 export const history = createBrowserHistory();
 
 export default function configureStore(preloadedState) {
-  const middlewares = [routerMiddleware(history), thunkMiddleware];
-
-  const store = createStore(
+  const middlewares = [routerMiddleware(history), thunkMiddleware],
+  store = createStore(
     rootReducer(history), // root reducer with router state
     preloadedState,
     composeWithDevTools(

@@ -1,0 +1,23 @@
+
+.item-details,
+.price-qty {
+  display: flex;
+}
+.price-qty > div:first-child {
+  font-weight: 600;
+}
+.price-qty > div {
+  flex: 1;
+  margin: 5px auto;
+}
+.price-qty > div:nth-child(2) {
+  text-align: right;
+}
+.item-name {
+  line-height: 1.5rem;
+}
+.item-list-price {
+  color: #666;
+  font-weight: 600;
+  text-decoration: line-through;
+}

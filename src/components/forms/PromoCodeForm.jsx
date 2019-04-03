@@ -20,8 +20,10 @@ class PromoCodeForm extends Component {
   }
 
   handleSubmit() {
-    const { applyPromoDiscount, subTotal } = this.props;
-    const { promoCode } = this.state;
+    const { applyPromoDiscount, subTotal } = this.props,
+
+
+      { promoCode } = this.state;
 
     if (promoCode !== '') {
       applyPromoDiscount(promoCode, subTotal);
@@ -29,8 +31,10 @@ class PromoCodeForm extends Component {
   }
 
   render() {
-    const { disableButton } = this.props;
-    const { promoCode } = this.state;
+    const { disableButton } = this.props,
+
+
+      { promoCode } = this.state;
 
     return (
       <form className="promo-code-form">

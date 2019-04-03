@@ -2,20 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const InputLabel = ({
-  classNames, labelText,
+  children, htmlFor, labelText, ...otherProps
 }) => (
-  <label className={classNames !== '' ? classNames : ''}>
+  <label htmlFor={htmlFor} {...otherProps}>
     {labelText}
+    {children}
   </label>
 );
 
-InputLabel.defaultProps = {
-  classNames: '',
-};
-
 InputLabel.propTypes = {
-  classNames: PropTypes.string,
-  forVal: PropTypes.string.isRequired,
+  children: PropTypes.shape([]).isRequired,
+  htmlFor: PropTypes.string.isRequired,
   labelText: PropTypes.string.isRequired,
 };
 

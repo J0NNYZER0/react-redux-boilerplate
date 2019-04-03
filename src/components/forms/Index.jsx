@@ -21,8 +21,8 @@ class Form extends Component {
   }
 
   handleSubmit() {
-    const { submitHandler, subTotal } = this.props;
-    const { promoCode } = this.state;
+    const { submitHandler, subTotal } = this.props,
+      { promoCode } = this.state;
 
     if (promoCode !== '') {
       submitHandler(promoCode, subTotal);
@@ -30,22 +30,23 @@ class Form extends Component {
   }
 
   render() {
-    const { disableButton } = this.props;
-    const { promoCode } = this.state;
+    const { disableButton } = this.props,
+      { promoCode } = this.state;
 
     return (
       <form className="form-group">
-        <InputLabel labelText="Promo code" />
+        <InputLabel htmlFor="promoCode" labelText="Promo code">
+          <TextInput
+            defaultValue={promoCode}
+            id="promoCode"
+            inputName="promoCode"
+            onChangeHandler={this.handleOnChange}
+          />
+        </InputLabel>
         <br />
-        <TextInput
-          defaultValue={promoCode}
-          idVal="promoCode"
-          inputName="promoCode"
-          onChangeHandler={this.handleOnChange}
-        />
         <ButtonInput
-          buttonText="Apply"
-          classNames="apply-promo-code"
+          buttonText="Apply Promocode"
+          classNames="round-corners"
           disableButton={disableButton}
           onClick={this.handleSubmit}
         />

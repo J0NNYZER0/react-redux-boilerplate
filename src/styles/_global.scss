@@ -1,0 +1,29 @@
+html {
+  font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: .875rem;
+}
+section {
+  margin: auto;
+  border: 2px solid #eaeaea;
+  border-radius: 6px;
+  padding: 10px 10px 20px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+}
+a {
+  flex: 1;
+  margin: 10px;
+  width: auto;
+  text-align: center;
+}
+.round-corners {
+  border-radius: 6px;
+}
+.border {
+  height: 1px;
+  width: 100%;
+  margin: 15px 0;
+  border-bottom: 1px solid #F0F0F0;
+}

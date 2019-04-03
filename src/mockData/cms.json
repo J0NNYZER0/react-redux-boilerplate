@@ -1,0 +1,18 @@
+{
+  "status": 200,
+  "data": {
+    "areas": [
+      {
+        "id": 0.082309209203980,
+        "content": "Some dummy content",
+        "section_id": 0.1234564322090721234
+      }
+    ],
+    "sections": [
+      {
+        "id": 0.1234564322090721234,
+        "position": 0
+      }
+    ]
+  }
+}

@@ -1,18 +1,21 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.jsx',
+  target: 'web',
+  entry: path.resolve(__dirname, 'src/index.jsx'),
   mode: 'development',
   output: {
+    path: path.resolve(__dirname, 'dist'),
     filename: './main.js',
   },
 
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 8081,
-    watchContentBase: true,
-    progress: true,
+    historyApiFallback: true,
+    //compress: true,
+    port: 8080,
+    //watchContentBase: true,
+    //progress: true,
   },
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json'],

@@ -5,14 +5,14 @@ import Pricing from './Pricing';
 const PurchaseSummary = ({
   children, pricing,
 }) => (
-  <div className="purchase-summary">
+  <section className="purchase-summary">
     <Pricing pricing={pricing} />
     {children}
-  </div>
+  </section>
 );
 
 PurchaseSummary.propTypes = {
-  children: PropTypes.shape([]).isRequired,
+  children: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   pricing: PropTypes.shape({}).isRequired,
 };
 

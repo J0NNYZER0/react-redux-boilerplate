@@ -1,0 +1,29 @@
+.cms-section {
+  display: flex;
+  height: 50px;
+  margin: 10px auto;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+  background: #E8E8E8;
+  padding: 10px;
+  
+}
+.cms-section > div:first-child,
+.cms-section > div:last-child {
+  flex: 50px;
+  text-align: center;
+}
+.cms-section > div:nth-child(2) {
+  width: calc(100% - 100px);
+  text-align: center;
+}
+.cms-areas {
+  display: flex;
+}
+.cms-area {
+  flex: 1;
+  border-radius: 6px;
+  padding: 10px;
+  background: #DCDCDC;
+}

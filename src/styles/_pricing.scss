@@ -1,0 +1,28 @@
+.subtotal,
+.taxes,
+.estimated-total {
+  display: flex;
+}
+.subtotal > div,
+.taxes > div,
+.estimated-total > div {
+  flex: 1;
+  margin: 5px;
+}
+.subtotal > div:nth-child(2),
+.taxes > div:nth-child(2),
+.estimated-total > div:nth-child(2) {
+  text-align: right;
+  font-weight: bold;
+}
+.pickup-saving {
+  color: red;
+}
+.zipcode {
+  margin-left: 5px;
+}
+.estimated-total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}

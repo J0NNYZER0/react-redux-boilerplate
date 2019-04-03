@@ -21,9 +21,9 @@ class ContentToggle extends Component {
 
 
   render() {
-    const { children, showText, hideText } = this.props;
-    const { showContent } = this.state;
-    const defaultText = showContent === true ? hideText : showText;
+    const { children, showText, hideText } = this.props,
+      { showContent } = this.state,
+      defaultText = showContent === true ? hideText : showText;
 
     return (
       <div className="content-toggle">

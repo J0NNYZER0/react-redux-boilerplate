@@ -1,6 +1,6 @@
-import data from '../mockData/itemDetails.json';
+import data from '../mockData/routes.json';
 
-export default function getItemsDetails(delay = 1000) {
+export default function getRoutes(delay = 1000) {
   return new Promise(((resolve) => {
     setTimeout(() => {
       resolve(data);
