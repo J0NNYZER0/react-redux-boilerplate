@@ -3,7 +3,7 @@ import initialState from './initialState';
 
 const sortedSections = arr => arr.sort((a,b) => a.position - b.position);
 
-export default function cmsReducer(state = initialState.cms, action) {
+export default function chatReducer(state = initialState.chat, action) {
   let newState
   switch (action.type) {
     case GET_CMS:

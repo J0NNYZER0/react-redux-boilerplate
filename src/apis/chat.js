@@ -1,7 +1,7 @@
-import data from '../mockData/cms.json';
+import data from '../mockData/chat.json';
 const delay = 1000;
 
-export function getCms() {
+export function getChat() {
   return new Promise(((resolve) => {
     setTimeout(() => {
       resolve(data);

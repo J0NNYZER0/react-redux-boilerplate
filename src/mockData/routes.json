@@ -9,18 +9,11 @@
       "linkText": "Home"
     },
     {
-      "id": "cms",
+      "id": "chat",
       "activeStyle": { "fontWeight": "bold"},
       "exact": false,
-      "to": "/cms",
-      "linkText": "Cms"
-    },
-    {
-      "id": "examples",
-      "activeStyle": { "fontWeight": "bold"},
-      "exact": false,
-      "to": "/examples",
-      "linkText": "Examples"
+      "to": "/chat",
+      "linkText": "Chat"
     }
   ]
 }

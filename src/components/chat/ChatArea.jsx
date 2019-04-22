@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CmsArea = ({ area, classNames }) => (
-  <div className={classNames !== '' ? `cms-area ${classNames}` : 'cms-area'}>
+const ChatArea = ({ area, classNames }) => (
+  <div className={classNames !== '' ? `chat-area ${classNames}` : 'chat-area'}>
     {area.content}
   </div>
 );
 
-CmsArea.defaultProps = {
+ChatArea.defaultProps = {
   classNames: '',
 };
 
-CmsArea.propTypes = {
+ChatArea.propTypes = {
   area: PropTypes.PropTypes.shape({}).isRequired,
   classNames: PropTypes.string,
 };
 
-export default CmsArea;
+export default ChatArea;

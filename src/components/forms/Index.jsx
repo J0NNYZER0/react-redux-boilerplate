@@ -13,6 +13,7 @@ class Form extends Component {
     };
 
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleOnKeyPress = this.handleOnKeyPress.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -20,14 +21,23 @@ class Form extends Component {
     this.setState({ promoCode: e.target.value });
   }
 
-  handleSubmit() {
+  handleOnKeyPress(e) {
+    e.preventDefault();
+
+    if (e.key === 'Enter') {
+      console.log('do validate');
+    }
+
+  }
+
+  /*handleSubmit() {
     const { submitHandler, subTotal } = this.props,
       { promoCode } = this.state;
 
     if (promoCode !== '') {
       submitHandler(promoCode, subTotal);
     }
-  }
+  }*/
 
   render() {
     const { disableButton } = this.props,
@@ -41,15 +51,9 @@ class Form extends Component {
             id="promoCode"
             inputName="promoCode"
             onChangeHandler={this.handleOnChange}
+            onKeyPressHandler={this.handleOnKeyPress}
           />
         </InputLabel>
-        <br />
-        <ButtonInput
-          buttonText="Apply Promocode"
-          classNames="round-corners"
-          disableButton={disableButton}
-          onClick={this.handleSubmit}
-        />
       </form>
     );
   }

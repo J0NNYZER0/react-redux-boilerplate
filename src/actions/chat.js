@@ -1,4 +1,4 @@
-import * as api from '../apis/cms';
+import * as api from '../apis/chat';
 import { GET_CMS, ADD_SECTION, REPOSITION_SECTION, ADD_AREA } from '../constants/actionTypes';
 
 const success = data => ({
@@ -15,7 +15,7 @@ addAreaSuccess = data => ({
 });
 
 export function get(data) {
-  return dispatch => api.getCms(data).then((response) => {
+  return dispatch => api.getChat(data).then((response) => {
     dispatch(success(response.data));
   }).catch((error) => {
     throw (error);

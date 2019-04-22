@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Page from '../cms/Page';
+import Page from '../chat/Page';
 
 const HomePage = () => (
   <Page>

@@ -3,6 +3,3 @@ export const GET_CMS = 'GET_CMS';
 export const ADD_SECTION = 'ADD_SECTION';
 export const REPOSITION_SECTION = 'REPOSITION_SECTION';
 export const ADD_AREA = 'ADD_AREA';
-export const GET_PRICING = 'GET_PRICING';
-export const APPLY_PROMO_DISCOUNT = 'APPLY_PROMO_DISCOUNT';
-export const GET_ITEM_DETAILS = 'GET_ITEM_DETAILS';

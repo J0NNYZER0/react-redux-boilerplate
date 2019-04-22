@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import HomePage from './pages/Home';
-import CmsPage from './pages/Cms';
-import ExamplesPage from './pages/Examples';
+import ChatPage from './pages/Chat';
 
 const Routes = ({
-  actions, itemDetails, cms, pricing,
+  actions, chat,
 }) => (
   <Switch>
     <Route
@@ -20,22 +19,11 @@ const Routes = ({
     />
     <Route
       exact
-      path="/cms"
+      path="/chat"
       render={() => (
-        <CmsPage
-          cmsActions={actions.cms}
-          cms={cms}
-        />
-      )}
-    />
-    <Route
-      exact
-      path="/examples"
-      render={() => (
-        <ExamplesPage
-          actions={actions}
-          itemDetails={itemDetails}
-          pricing={pricing}
+        <ChatPage
+          chatActions={actions.chat}
+          chat={chat}
         />
       )}
     />
@@ -44,9 +32,7 @@ const Routes = ({
 
 Routes.propTypes = {
   actions: PropTypes.shape({}).isRequired,
-  cms: PropTypes.shape({}).isRequired,
-  itemDetails: PropTypes.shape({}).isRequired,
-  pricing: PropTypes.shape({}).isRequired,
+  chat: PropTypes.shape({}).isRequired,
 };
 
 export default Routes;

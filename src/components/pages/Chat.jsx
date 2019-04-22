@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import CmsSection from '../cms/CmsSection';
-import CmsArea from '../cms/CmsArea';
+import ChatSection from '../chat/ChatSection';
+import ChatArea from '../chat/ChatArea';
 import Button from '../inputs/Button';
+import MessageForm from '../forms/MessageForm';
 
-class CmsPage extends Component {
+class ChatPage extends Component {
   constructor(props) {
     super(props);
 
@@ -12,13 +13,13 @@ class CmsPage extends Component {
   }
 
   addSection() {
-    const { cms, cmsActions } = this.props,
+    const { chat, chatActions } = this.props,
       id = Math.random();
-    cmsActions.addSection({
+    chatActions.addSection({
       id,
-      position: cms.sections.length,
+      position: chat.sections.length,
     });
-    cmsActions.addArea({
+    chatActions.addArea({
       id: Math.random(),
       content: 'Some dummy content',
       section_id: id,
@@ -26,37 +27,38 @@ class CmsPage extends Component {
   }
 
   render() {
-    const { cms, cmsActions } = this.props;
+    const { chat, chatActions } = this.props;
     return (
-      <div className="cms">
+      <div className="chat">
         <Button
           buttonText="Add New Section"
           classNames=""
           disableButton={false}
           onClick={this.addSection}
         />
-        {cms.sections && cms.sections.map((section, i, arr) => (
-          <CmsSection
+        {chat.sections && chat.sections.map((section, i, arr) => (
+          <ChatSection
             key={section.id}
-            cmsActions={cmsActions}
+            chatActions={chatActions}
             position={section.position || i}
             section={section}
             isLast={i === arr.length - 1}
           >
-            {cms.areas.map(
+            {chat.areas.map(
               area => section.id === area.section_id
-              && <CmsArea key={area.id} area={area} />,
+              && <ChatArea key={area.id} area={area} />,
             )}
-          </CmsSection>
+          </ChatSection>
         )).reverse()}
+        <MessageForm />
       </div>
     );
   }
 }
 
-CmsPage.propTypes = {
-  cmsActions: PropTypes.shape({}).isRequired,
-  cms: PropTypes.shape({}).isRequired,
+ChatPage.propTypes = {
+  chatActions: PropTypes.shape({}).isRequired,
+  chat: PropTypes.shape({}).isRequired,
 };
 
-export default CmsPage;
+export default ChatPage;

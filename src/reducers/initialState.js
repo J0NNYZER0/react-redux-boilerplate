@@ -1,9 +1,7 @@
 export default {
   routes: [],
-  cms: {
+  chat: {
     areas: [],
     sections: []
-  },
-  pricing: {},
-  itemDetails: {},
+  }
 };
