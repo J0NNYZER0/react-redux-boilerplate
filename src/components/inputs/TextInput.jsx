@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const TextInput = ({
-  autocomplete, classNames, inputName, onChangeHandler, placeholder, defaultValue,
+  autocomplete, classNames, inputName, onChangeHandler, placeholder, value,
 }) => (
   <input
     autoComplete={autocomplete}
-    className={classNames !== '' ? `text-input ${classNames}` : 'text-input'}
+    className={classNames !== '' && `${classNames}`}
     name={inputName}
     onChange={onChangeHandler}
     placeholder={placeholder !== '' ? placeholder : null}
     type="text"
-    value={defaultValue}
+    value={value}
   />
 );
 
@@ -27,7 +27,7 @@ TextInput.propTypes = {
   inputName: PropTypes.string.isRequired,
   onChangeHandler: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
-  defaultValue: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default TextInput;

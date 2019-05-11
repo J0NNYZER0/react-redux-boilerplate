@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
-import pricing from './pricing';
-import itemDetails from './itemDetails';
+import search from './search';
 
 export default history => combineReducers({
   router: connectRouter(history),
-  pricing,
-  itemDetails,
+  search
 });

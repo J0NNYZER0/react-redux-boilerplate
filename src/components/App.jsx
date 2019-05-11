@@ -1,14 +1,12 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
-import HomePage from './pages/Home';
+import SearchPage from './pages/Search';
 
 const App = () => (
-  <div>
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-    </Switch>
-  </div>
+  <Switch>
+    <Route exact path="/" component={SearchPage} />
+  </Switch>
 );
 
 export default hot(module)(App);

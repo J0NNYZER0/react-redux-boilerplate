@@ -7,7 +7,7 @@ const mockOnClickHandler = jest.fn();
 
 const ButtonInput = (
   <TestButtonInput
-    buttonText="Apply"
+    buttonText="Search"
     classNames="apply-promo-code"
     disableButton={false}
     onClick={mockOnClickHandler}
@@ -45,19 +45,19 @@ describe('<ButtonInput />', () => {
   describe('should have an html class attribute value', () => {
     wrapper = shallow(
       <TestButtonInput
-        buttonText="Apply"
+        buttonText="Search"
         disableButton={false}
         onClick={mockOnClickHandler}
       />,
     );
 
     it('equal to \'button-input\', when no classNames prop is set', () => {
-      expect(wrapper.html()).toEqual('<button class="button-input" type="button">Apply</button>');
+      expect(wrapper.html()).toEqual('<button type="button">Search</button>');
     });
 
-    it('equal to \'button-input test-class\', when the classNames prop is set with \'test-class\' as the value', () => {
+    it('equal to \'test-class\', when the classNames prop is set with \'test-class\' as the value', () => {
       wrapper.setProps({ classNames: 'test-class' });
-      expect(wrapper.html()).toEqual('<button class="button-input test-class" type="button">Apply</button>');
+      expect(wrapper.html()).toEqual('<button class="test-class" type="button">Search</button>');
     });
   });
 });

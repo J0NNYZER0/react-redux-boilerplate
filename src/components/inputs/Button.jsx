@@ -21,7 +21,7 @@ class ButtonInput extends Component {
       <button
         disabled={disableButton}
         onClick={this.handleOnClick}
-        className={classNames !== '' ? `button-input ${classNames}` : 'button-input'}
+        className={classNames !== '' && `${classNames}`}
         type="button"
       >
         {buttonText}
