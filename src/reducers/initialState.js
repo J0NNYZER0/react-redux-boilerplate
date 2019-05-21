@@ -1,3 +1,6 @@
 export default {
-  search: {}
+  repos: [],
+  site: {
+    isLoading: false
+  }
 };

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import ErrorBoundary from './ErrorBoundary';
 import App from './App';
 
-const Root = ({ store, history }) => (
+const Root = ({ history, store }) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <ErrorBoundary>
@@ -16,7 +16,7 @@ const Root = ({ store, history }) => (
 );
 
 Root.propTypes = {
-  store: PropTypes.shape({}).isRequired,
   history: PropTypes.shape({}).isRequired,
+  store: PropTypes.shape({}).isRequired,
 };
 export default Root;

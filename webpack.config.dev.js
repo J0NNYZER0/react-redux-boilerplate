@@ -1,18 +1,20 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: {
+    bundle: './src/index.jsx'
+  },
   mode: 'development',
   output: {
-    filename: './main.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: './bundle.js'
   },
-
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
+    historyApiFallback: true,
+    hot: true,
     port: 8081,
-    watchContentBase: true,
-    progress: true,
   },
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json'],
@@ -25,11 +27,12 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif|ico)$/,
+        test: /\.(png|svg|jpg|gif|ico|ttf)$/,
         use: [{
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]',
+            name: 'assets/[name].[ext]',
+            publicPath: '/'
           },
         }],
       },
